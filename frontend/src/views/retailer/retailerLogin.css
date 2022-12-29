@@ -1,0 +1,26 @@
+.retailer-login {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  margin: 2em;
+  position: relative;
+  background: rgba(19, 13, 13, 0.958);
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  color: white;
+}
+
+.login-card {
+  height: 100%;
+  padding: 1em;
+  background: rgba(19, 13, 13, 0.958);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.btn {
+  margin: 0.7em;
+}

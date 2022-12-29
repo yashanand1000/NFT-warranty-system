@@ -1,0 +1,269 @@
+.navbar {
+  background: transparent;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-style: solid;
+  border-width: 0px 0px thin;
+  border-color: #c2e0ff14;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0vh;
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  background-color: 'transparent';
+  width: max-content;
+  border-radius: 5px !important;
+}
+
+.nav-button:hover {
+  background-color: #002f0f !important;
+}
+
+.nav-button-text {
+  font-family: 'PT Sans', sans-serif !important;
+  color: #61c97d !important;
+}
+
+.profile-icon {
+  opacity: 0.75;
+}
+
+.profile-icon:hover {
+  opacity: 1;
+}
+
+.fa-hive {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-menu-mobile {
+  display: none;
+  list-style: none;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.fa-angle-down {
+  margin-left: 4px;
+}
+
+#basic-button {
+  background-color: white;
+  color: black;
+  width: 100px;
+  font-weight: 600;
+}
+
+#basic-menu {
+  width: 133px !important;
+}
+
+#menu-item-c {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+#menu-item-c:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+#menu-item-r {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+}
+
+#menu-item-r:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    padding-top: 80px;
+    top: 0px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu-mobile.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    border-bottom: 0.5px solid #fff;
+  }
+
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-xmark {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 5px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+}
+
+/* 
+.Menu{
+  display: flex;
+  justify-content: center;
+}
+
+.m-item{
+  display: none !important;
+  position: absolute;
+  top: 20px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 8px 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  border-bottom: 1px solid var(--primary);
+  transition: all 0.5s ease-out;
+}
+
+.m-item:hover{
+  background: rgba(256, 256, 256, 0.3);
+  color: #fff;
+  transition: 250ms;
+}
+
+.open-1{
+  display: block !important;
+  top: 60px;
+  transition: all 0.5s ease-out;
+}
+
+.open-2{
+  display: block !important;
+  top: 102px;
+  transition: all 0.5s ease-out;
+} */

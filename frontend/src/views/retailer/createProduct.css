@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  background-color: #0a1929;
+  color: white;
+}
+
+.upload-field {
+  color: #fff;
+}
+
+.upload-field:focus {
+  border: 0.5px solid rgb(242, 240, 240);
+}
+.upload-field-icon {
+  color: rgba(255, 255, 255, 0.838);
+}
+
+.text-field {
+  width: 200px;
+}
+
+.text {
+  color: white !important;
+}
+
+.profile {
+  width: 450px;
+  margin: auto;
+}
+
+.dropdown {
+  width: 200px;
+  margin: auto;
+  color: #fff !important;
+  border: 00.5px solid rgb(196, 193, 193) !important;
+  border-radius: 0.25rem !important;
+}
+
+.dropdown:focus {
+  border: 0.5px solid rgb(242, 240, 240) !important;
+}
+
+.dropdown:hover {
+  border: 0.5px solid rgb(242, 240, 240) !important;
+}

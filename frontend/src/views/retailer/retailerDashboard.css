@@ -1,0 +1,13 @@
+.issued-products-table {
+  border: 1px solid #e5e5e5;
+  background-color: #0a1929;
+}
+
+.issued-products-head {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.issued-products-body {
+  color: white !important;
+}

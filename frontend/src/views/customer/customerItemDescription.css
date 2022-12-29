@@ -1,0 +1,40 @@
+.product_name {
+  font-size: 2.5rem !important;
+}
+
+.fields {
+  color: white;
+}
+
+.dialog {
+  width: 700px;
+  min-width: 350px;
+  margin: auto;
+  overflow-x: hidden !important;
+}
+
+@media (max-width: 800px) {
+  .product_name {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .dialog {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .dialog {
+    width: 370px;
+    margin: auto;
+  }
+
+  .dialog-btns {
+    width: 240px;
+    margin: auto;
+    padding: 0px !important;
+  }
+}

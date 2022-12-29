@@ -1,0 +1,52 @@
+version: '3'
+services:
+  django:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    image: pdo/backend
+    container_name: pydo-django-backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - DB_HOST=postgresql
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/app
+    networks:
+      - app-network
+    command:
+      - /bin/sh
+      - -c
+      - |
+        python manage.py migrate
+        python manage.py runserver 0.0.0.0:8000
+  react:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    image: pydo/frontend
+    container_name: pydo-react-frontend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - BACKEND_HOST=django
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+    - 3000:3000
+    volumes:
+    - ./frontend:/app
+    depends_on:
+      - django
+    networks:
+      - app-network
+    command: npm start
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
